@@ -1,0 +1,560 @@
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* ------------------------------------ */
+/*     Mobile (min-width: 0em) View     */
+/* ------------------------------------ */
+@media only screen and (min-width: 0em) {
+    #triplet {
+      padding: 50px 0;
+      background-color: var(--primaryShade);
+  
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .content {
+        margin: auto;
+        margin-top: 25/16em;
+        max-width: 611/16em;
+  
+        h2 {
+          font-size: 32/16em;
+          margin-bottom: 42/48em;
+          color: var(--primary);
+        }
+  
+        p {
+          margin-bottom: 20/18em;
+          color: var(--primary);
+        }
+  
+        ul {
+          padding-left: 12/16em;
+          margin-bottom: 12/16em;
+          color: var(--primary);
+  
+          li {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            color: var(--primary);
+  
+            img {
+              margin-right: 10/16em;
+              margin-top: 4/18em;
+            }
+          }
+        }
+  
+        .button-solid {
+          margin-top: 25/14em;
+        }
+      }
+  
+      /* Merge your snippet here */
+      .image-box {
+        display: block;
+        position: relative;
+        margin: auto;
+        /* Your existing sizing for mobile */
+        width: 711/16em;
+        height: 861/16em;
+  
+        /* Scales the .image-box down somewhat responsively */
+        font-size: ~"min(1.4vw, 1em)";
+
+  
+        /* Base IMG styling for mobile */
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+  
+      /* Style for the first .image-box in this section */
+      .image-box:nth-of-type(1) {
+        margin-left: 80/16em; /* from your snippet */
+        position: relative;
+  
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin-top: 640/16em;   /* from your snippet */
+          margin-left: 460/16em;  /* from your snippet */
+          width: 75px;
+          height: 75px;
+          background: url("../images/asset2.png") center center no-repeat;
+          background-size: contain;
+          z-index: 1;
+        }
+  
+        img {
+  
+          border-radius: 0% 0% 50% 0%;
+          height: 100%;
+        }
+      }
+  
+      /* Style for the second .image-box in this section */
+      .image-box:nth-of-type(2) {
+        margin-right: 80/16em;
+        position: relative;
+  
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin-top: 80/16em;
+          margin-left: 60/16em;
+          width: 75px;
+          height: 75px;
+          background: url("../images/asset1.png") center center no-repeat;
+          background-size: contain;
+          z-index: 1;
+        }
+  
+        img {
+          border-radius: 50% 0% 0% 0%;
+          height: 100%;
+          margin-top: 120/16em;
+        }
+      }
+    }
+  }
+  
+
+/* Inbetween */
+@media only screen and (min-width: 666px) {
+    #triplet {
+        padding: 100/16em 0;
+    }
+}   
+
+/* Small Desktop */
+@media only screen and (min-width: 1300px) {
+    #triplet {
+        padding: 150/16em 0;
+        width: 100%;
+        max-height: 100%;
+
+        .container {
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+
+        .content {
+            margin: 0;
+            width: 80%;
+            text-align: center;
+
+            h2 {
+                font-size: 42/16em;
+            }
+        }
+
+        .image-box {
+            margin: 0;
+            width: 20%;
+        }
+
+        .image-box:nth-of-type(1) {
+            margin-left: 80/16em;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 320/16em;
+                margin-left: 100/16em; // ← shifted left
+                width: 130px;          // ← smaller size
+                height: 130px;
+                background: url("../images/asset2.png") center center no-repeat;
+                background-size: contain;
+                z-index: 1;
+            }
+
+            img {
+                border-radius: 0% 0% 50% 0%;
+                height: 50%;
+            }
+        }
+
+        .image-box:nth-of-type(2) {
+            margin-right: 80/16em;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 320/16em;
+                margin-left: 20/16em;
+                width: 200px;
+                height: 200px;
+                background: url("../images/asset1.png") center center no-repeat;
+                background-size: contain;
+                z-index: 1;
+            }
+
+            img {
+                border-radius: 50% 0% 0% 0%;
+                height: 50%;
+                margin-top: 390/16em;
+            }
+        }
+    }
+}
+
+/* Large Desktop - restore original spacing/size */
+@media only screen and (min-width: 1600px) {
+    #triplet .image-box:nth-of-type(1)::before {
+        margin-left: 200/16em;
+        width: 130px;
+        height: 130px;
+    }
+}
+
+
+
+
+
+/* ------------------------------------------- */
+/*            Side By Side Reverse            */
+/* ------------------------------------------- */
+/* --------- Mobile --------- */
+@media only screen and (min-width: 0em) {
+    #sidebyside-reverse {
+      padding: 50px 0;
+  
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .content {
+        order: 1;
+        margin: auto;
+        margin-top: 75/16em;
+        max-width: 611/16em;
+  
+        h2 {
+          font-size: 32/16em;
+          margin-bottom: 42/48em;
+          color: var(--primary);
+        }
+  
+        p {
+          margin-bottom: 20/18em;
+          color: var(--primary);
+        }
+  
+        ul {
+          padding-left: 20/16em;
+          margin-bottom: 20/16em;
+          color: var(--primary);
+  
+          li {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            color: var(--primary);
+            margin-bottom: 12/16em;
+
+            span {
+                padding-top: 4/16em;
+            }
+           
+  
+            img {
+              margin-right: 10/16em;
+              margin-top: 4/18em;
+            }
+          }
+        }
+  
+        .button-solid {
+          margin-top: 25/14em;
+        }
+      }
+  
+      /* Accordion Styling */
+      .accordion {
+        order: 2;
+        margin: auto;
+        margin-top: 24/16em;
+  
+        /* Each item margin-bottom for spacing */
+        .accordion-item {
+          margin-bottom: 24/16em;
+          border-bottom: 1px solid var(--primary);
+  
+          .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+  
+            h3 {
+              font-size: 16/16em;
+              margin: 0;
+              color: var(--primary);
+            }
+  
+            /* Puzzle SVG icon styling */
+            .accordion-icon {
+              width: 24/16em;  // Adjust size as needed
+              height: 24/16em;
+              transition: transform 0.3s ease;
+              transform: rotate(0deg);
+            }
+          }
+  
+          .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+  
+            p {
+              margin-top: 16/16em;
+              margin-bottom: 16/16em;
+              color: var(--primary);
+            }
+          }
+  
+          /* When open, expand the content and rotate the icon */
+          &.open {
+            .accordion-content {
+              max-height: 400px; // or large enough for content
+            }
+  
+            .accordion-icon {
+              transform: rotate(-90deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* --------- In-between (tablet, etc.) --------- */
+  @media only screen and (min-width: 666px) {
+    #sidebyside-reverse {
+      padding: 100/16em 0;
+  
+      .accordion {
+        width: 700/16em; // example width for tablets
+      }
+    }
+  }
+  
+  /* --------- Small Desktop --------- */
+  @media only screen and (min-width: 1300px) {
+    #sidebyside-reverse {
+      padding: 150/16em 0;
+  
+      .container {
+        max-width: 1391/16em;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+  
+      .content {
+        margin: 0;
+        width: 60%;
+        order: 1;
+
+        h2 {
+            font-size: 42/16em;
+        }
+      }
+  
+      /* Move the accordion to the right side and adjust the spacing */
+      .accordion {
+        margin-left: 170/16em;
+        order: 2;
+        width: 550/16em; // adjust as you like
+  
+        .accordion-item {
+          margin-bottom: 24/16em;
+  
+          .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+  
+            h3 {
+              font-size: 32/16em;
+              margin: 0;
+            }
+  
+            .accordion-icon {
+              width: 32/16em;   // ensure proportionately bigger icon if you like
+              height: 32/16em;
+              transition: transform 0.3s ease;
+              margin-left: 16/16em;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+
+/*-- -------------------------- -->
+<---    Final Call To Action    -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+    #cta {
+        position: relative;
+        padding: 50/16em 0;
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: #000;
+            opacity: .6;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        picture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -2;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .title {
+            font-weight: 900;
+            font-size:~"min(9vw, 3em)";
+            line-height: 58/48;
+            color: #fff;
+            position: relative;
+            margin-bottom: 36/48em;
+            text-align: center;
+        }
+
+        p {
+            color: #fff;
+            text-align: center;
+            opacity: 1;
+            margin: auto;
+            margin-bottom: 36/18em;
+            width: 96%;
+            max-width: 598/18em;
+
+        }
+    }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+    #cta {
+        padding: 168/16em 0;
+    }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+    #cta {
+        position: relative;
+        margin-top: 100/16em;
+        &:before {
+            display: none;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 1108/16em;
+            width: 2000/16em;
+            background: url("../images/cta-squares.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -3;
+         }
+        .container {
+            width: 90.0625%;
+            margin: auto;
+        }
+
+        picture {
+            width: 90.0625%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: #000;
+                opacity: .6;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+    body.dark-mode {
+        #cta {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
