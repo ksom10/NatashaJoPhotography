@@ -1,248 +1,571 @@
-/*-- -------------------------- -->
-<---       Side By Side         -->
-<--- -------------------------- -*/
+/* ============================================
+   ABOUT HERO
+   ============================================ */
 /* Mobile */
 @media only screen and (min-width: 0em) {
-  #sidebyside {
-    padding: 50px 0;
-  }
-  #sidebyside .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  #sidebyside .content {
-    order: 2;
-    margin: auto;
-    margin-top: 4.6875em;
-    max-width: 38.1875em;
-  }
-  #sidebyside .content h2 {
-    font-size: 2em;
-    margin-bottom: 0.875em;
-  }
-  #sidebyside .content p {
-    margin-bottom: 1.11111111em;
-  }
-  #sidebyside .content ul {
-    padding-left: 1.25em;
-    margin-bottom: 1.25em;
-  }
-  #sidebyside .content ul li {
-    list-style: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  #sidebyside .content ul li img {
-    margin-right: 0.625em;
-    margin-top: 0.22222222em;
-  }
-  #sidebyside .content .button-solid {
-    margin-top: 1.78571429em;
-  }
-  #sidebyside .image-box {
-    display: block;
+  #about-hero {
     position: relative;
-    margin: auto;
-    width: 38.1875em;
-    height: 53.8125em;
-    font-size: min(1.4vw, 1em);
+    overflow: hidden;
+    background: #fdfaf7;
+    padding: 7.5em 0 3.125em;
+    z-index: 1;
   }
-  #sidebyside .image-box:before {
-    content: '';
+  #about-hero .container {
+    width: 92%;
+    max-width: 75em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 3em;
+  }
+  #about-hero .about-floral {
     position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: var(--primary);
-    opacity: 1;
-    top: 2.5em;
+    pointer-events: none;
+    opacity: .24;
+    z-index: 1;
+  }
+  #about-hero .floral-top-left {
+    width: 8.75em;
+    height: auto;
+    top: 4.375em;
     left: -2.5em;
   }
-  #sidebyside .image-box:after {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 32.25em;
-    width: 28.75em;
-    background: url("/images/content-circles.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 1;
-    top: -14.125em;
-    right: -6.8125em;
-    z-index: -1;
+  #about-hero .about-hero-copy {
+    text-align: center;
   }
-  #sidebyside .image-box img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+  #about-hero .about-hero-copy h1 {
+    margin: 1em 0 1.125em;
+    font-size: 3em;
+    line-height: 1.1em;
+    font-weight: 500;
+    color: var(--primaryDark);
+  }
+  #about-hero .about-hero-copy p {
+    margin: 0 auto;
+    max-width: 22em;
+    font-size: 1.375em;
+    line-height: 1.75em;
+    color: var(--bodyText);
+    margin-top: -2em;
+  }
+  #about-hero .about-hero-media {
     width: 100%;
+    max-width: 32.5em;
+    margin: 0 auto;
+  }
+  #about-hero .about-hero-media picture,
+  #about-hero .about-hero-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  #about-hero .about-hero-media img {
     object-fit: cover;
   }
 }
-/* Inbetween */
-@media only screen and (min-width: 666px) {
-  #sidebyside {
-    padding: 6.25em 0;
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #about-hero {
+    padding: 10.625em 0 4.375em;
+  }
+  #about-hero .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.75em;
+  }
+  #about-hero .floral-top-left {
+    width: 11.25em;
+    top: 4.625em;
+    left: -3em;
+  }
+  #about-hero .about-hero-copy {
+    text-align: left;
+  }
+  #about-hero .about-hero-copy h1 {
+    font-size: 3.75em;
+  }
+  #about-hero .about-hero-copy p {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 18em;
+    font-size: 1.5em;
+  }
+  #about-hero .about-hero-media {
+    max-width: none;
   }
 }
-/* Small Desktop */
+/* Desktop */
 @media only screen and (min-width: 1300px) {
-  #sidebyside {
-    padding: 9.375em 0;
+  #about-hero {
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    padding: 11.25em 0 5em;
+    margin-top: 10em;
   }
-  #sidebyside .container {
-    max-width: 86.9375em;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+  #about-hero .container {
+    width: 96%;
+    max-width: 80em;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 2.5em;
   }
-  #sidebyside .content {
-    margin: 0;
-    width: 60%;
+  #about-hero .floral-top-left {
+    width: 22.5em;
+    top: 10em;
+    opacity: .96;
   }
-  #sidebyside .content h2 {
-    font-size: 3em;
-  }
-  #sidebyside .image-box {
-    margin: 0;
-    margin-right: 10.625em;
-  }
-}
-/*-- -------------------------- -->
-<---       Side By Side Reverse         -->
-<--- -------------------------- -*/
-/* Mobile */
-@media only screen and (min-width: 0em) {
-  #sidebyside-reverse {
-    padding: 50px 0;
-  }
-  #sidebyside-reverse .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  #sidebyside-reverse .content {
-    order: 2;
-    margin: auto;
-    margin-top: 4.6875em;
-    max-width: 38.1875em;
-  }
-  #sidebyside-reverse .content h2 {
-    font-size: 2em;
-    margin-bottom: 0.875em;
-  }
-  #sidebyside-reverse .content p {
-    margin-bottom: 1.11111111em;
-  }
-  #sidebyside-reverse .content ul {
+  #about-hero .about-hero-copy {
     padding-left: 1.25em;
+  }
+  #about-hero .about-hero-copy h1 {
+    font-size: 4.75em;
     margin-bottom: 1.25em;
   }
-  #sidebyside-reverse .content ul li {
-    list-style: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+  #about-hero .about-hero-copy p {
+    font-size: 1.625em;
+    max-width: 17em;
   }
-  #sidebyside-reverse .content ul li img {
-    margin-right: 0.625em;
-    margin-top: 0.22222222em;
+  #about-hero .about-hero-media {
+    max-width: 28.75em;
+    margin-left: auto;
   }
-  #sidebyside-reverse .content .button-solid {
-    margin-top: 1.78571429em;
-  }
-  #sidebyside-reverse .image-box {
-    display: block;
+}
+/* ============================================
+   ABOUT WELCOME
+   ============================================ */
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #about-welcome {
     position: relative;
-    margin: auto;
-    width: 38.1875em;
-    height: 53.8125em;
-    font-size: min(1.4vw, 1em);
+    overflow: hidden;
+    background: #fdfaf7;
+    padding: 1.125em 0 4.375em;
+    z-index: 2;
   }
-  #sidebyside-reverse .image-box:before {
-    content: '';
+  #about-welcome .container {
+    width: 92%;
+    max-width: 75em;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  #about-welcome .about-floral {
     position: absolute;
-    display: block;
-    height: 100%;
+    pointer-events: none;
+    opacity: .7;
+    z-index: 1;
+  }
+  #about-welcome .floral-middle-left {
+    position: absolute;
+    width: 21.25em;
+    height: auto;
+    left: -1em;
+    top: -2em;
+    z-index: 1;
+  }
+  #about-welcome .welcome-head {
+    text-align: center;
+    max-width: 51.25em;
+    margin: 0 auto 2.375em;
+  }
+  #about-welcome .welcome-head h2 {
+    margin: 0 0 0.875em;
+    font-size: 3em;
+    line-height: 1.1em;
+    font-weight: 500;
+    color: var(--primaryDark);
+  }
+  #about-welcome .welcome-head p {
+    margin: 0 auto;
+    max-width: 24em;
+    font-size: 1.5em;
+    line-height: 1.8em;
+    color: var(--bodyText);
+  }
+  #about-welcome .welcome-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75em;
+    align-items: center;
+  }
+  #about-welcome .welcome-image-wrap {
+    position: relative;
     width: 100%;
-    background: var(--primary);
-    opacity: 1;
-    top: 2.5em;
-    left: -2.5em;
+    max-width: 20em;
+    margin: 0 auto;
   }
-  #sidebyside-reverse .image-box:after {
-    content: '';
-    position: absolute;
+  #about-welcome .welcome-image {
     display: block;
-    height: 32.25em;
-    width: 28.75em;
-    background: url("/images/content-circles.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 1;
-    top: -14.125em;
-    right: -6.8125em;
-    z-index: -1;
-  }
-  #sidebyside-reverse .image-box img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
     width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.1875em solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0.625em 1.75em rgba(0, 0, 0, 0.06);
+  }
+  #about-welcome .welcome-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
-}
-/* Inbetween */
-@media only screen and (min-width: 666px) {
-  #sidebyside-reverse {
-    padding: 6.25em 0;
+  #about-welcome .welcome-floral-accent {
+    position: absolute;
+    width: 23.75em;
+    height: auto;
+    right: -6em;
+    bottom: -4em;
+    opacity: 1;
+    pointer-events: none;
+  }
+  #about-welcome .welcome-copy {
+    text-align: center;
+    max-width: 47.5em;
+    margin: 0 auto;
+  }
+  #about-welcome .welcome-copy p {
+    margin: 0 0 1.75em;
+    font-size: 1.5em;
+    line-height: 1.85em;
+    color: var(--bodyText);
+  }
+  #about-welcome .welcome-line {
+    width: 100%;
+    max-width: 32.5em;
+    height: 0.0625em;
+    background: rgba(185, 169, 143, 0.28);
+    margin: 0 auto;
   }
 }
-/* Small Desktop */
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #about-welcome {
+    padding: 1.625em 0 5.3125em;
+  }
+  #about-welcome .floral-middle-left {
+    width: 13.75em;
+    left: -4.5em;
+    top: 8.125em;
+  }
+  #about-welcome .welcome-head {
+    margin-bottom: 2.75em;
+  }
+  #about-welcome .welcome-head h2 {
+    font-size: 3.75em;
+  }
+  #about-welcome .welcome-head p {
+    font-size: 1.625em;
+  }
+  #about-welcome .welcome-body {
+    grid-template-columns: 20em 1fr;
+    gap: 2.875em;
+  }
+  #about-welcome .welcome-image-wrap {
+    max-width: none;
+  }
+  #about-welcome .welcome-copy {
+    text-align: left;
+  }
+  #about-welcome .welcome-copy p {
+    font-size: 1.625em;
+    margin-bottom: 1.875em;
+  }
+  #about-welcome .welcome-line {
+    margin-left: 0;
+  }
+}
+/* Desktop */
 @media only screen and (min-width: 1300px) {
-  #sidebyside-reverse {
-    padding: 9.375em 0;
+  #about-welcome {
+    position: relative;
+    z-index: 3;
+    overflow: visible;
+    padding: 2.125em 0 6.25em;
   }
-  #sidebyside-reverse .container {
-    max-width: 86.9375em;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+  #about-welcome .container {
+    width: 96%;
+    max-width: 80em;
   }
-  #sidebyside-reverse .content {
-    margin: 0;
-    width: 60%;
-    order: 1;
+  #about-welcome .floral-middle-left {
+    position: absolute;
+    width: 38.75em;
+    height: auto;
+    left: 2.5em;
+    top: -10em;
+    z-index: 4;
   }
-  #sidebyside-reverse .content h2 {
-    font-size: 3em;
+  #about-welcome .welcome-head {
+    max-width: 61.25em;
+    margin-bottom: 3.25em;
   }
-  #sidebyside-reverse .image-box {
-    margin: 0;
-    margin-left: 10.625em;
-    order: 2;
+  #about-welcome .welcome-head h2 {
+    font-size: 4.5em;
+    margin-bottom: 0.75em;
   }
-  #sidebyside-reverse .image-box:before {
-    left: auto;
-    right: -2.5em;
+  #about-welcome .welcome-head p {
+    max-width: 16em;
+    font-size: 1.75em;
   }
-  #sidebyside-reverse .image-box:after {
-    right: auto;
-    left: -6.8125em;
+  #about-welcome .welcome-body {
+    grid-template-columns: 21.25em 1fr;
+    gap: 5em;
+    align-items: center;
+  }
+  #about-welcome .welcome-image-wrap {
+    max-width: 21.25em;
+  }
+  #about-welcome .welcome-floral-accent {
+    width: 28.75em;
+    right: -9em;
+    bottom: -4.75em;
+  }
+  #about-welcome .welcome-copy p {
+    font-size: 1.875em;
+    max-width: 22em;
+  }
+  #about-welcome .welcome-line {
+    max-width: 40em;
   }
 }
-/*-- -------------------------- -->
-<---    Final Call To Action    -->
-<--- -------------------------- -*/
+/* ============================================
+   GLIMPSE GRID
+   ============================================ */
+/* ============================================
+   ABOUT GLIMPSE
+   ============================================ */
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #about-glimpse {
+    position: relative;
+    overflow: hidden;
+    background: #fdfaf7;
+    padding: 4.375em 0 5.625em;
+  }
+  #about-glimpse:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 11.25em;
+    height: 13.75em;
+    left: -2.5em;
+    bottom: 1.25em;
+    background: url('../images/glimpse-floral-bg.png') no-repeat center;
+    background-size: contain;
+    opacity: .18;
+    pointer-events: none;
+  }
+  #about-glimpse .container {
+    width: 92%;
+    max-width: 75em;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  #about-glimpse .glimpse-head {
+    text-align: center;
+    margin-bottom: 2.625em;
+  }
+  #about-glimpse .glimpse-head h2 {
+    margin: 0 0 0.75em;
+    font-size: 2.375em;
+    line-height: 1.2em;
+    font-weight: 500;
+    color: var(--primaryDark);
+  }
+  #about-glimpse .glimpse-head .glimpse-script-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.875em;
+    flex-wrap: nowrap;
+  }
+  #about-glimpse .glimpse-head .glimpse-script-row .line {
+    width: 3.5em;
+    height: 0.0625em;
+    background: rgba(185, 169, 143, 0.55);
+    flex: none;
+  }
+  #about-glimpse .glimpse-head .glimpse-script-row p {
+    margin: 0;
+    font-size: 1.75em;
+    line-height: 1.2em;
+    color: var(--primary);
+    font-style: italic;
+    white-space: nowrap;
+  }
+  #about-glimpse .glimpse-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5em;
+    max-width: 26.25em;
+    margin: 0 auto;
+  }
+  #about-glimpse .glimpse-item {
+    text-align: center;
+  }
+  #about-glimpse .glimpse-photo {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.375em;
+    background: #fff;
+    padding: 0.25em;
+    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.04);
+  }
+  #about-glimpse .glimpse-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  #about-glimpse .glimpse-copy h3 {
+    margin: 0;
+    font-size: 1.75em;
+    line-height: 1.1em;
+    font-weight: 500;
+    letter-spacing: .14em;
+    color: var(--primaryDark);
+  }
+  #about-glimpse .glimpse-copy h4 {
+    margin: 0.375em 0 0.75em;
+    font-size: 1.75em;
+    line-height: 1.1em;
+    font-weight: 400;
+    color: var(--primary);
+    font-style: italic;
+  }
+  #about-glimpse .glimpse-copy .mini-line {
+    display: block;
+    width: 3.375em;
+    height: 0.0625em;
+    background: rgba(185, 169, 143, 0.55);
+    margin: 0 auto 1.125em;
+  }
+  #about-glimpse .glimpse-copy p {
+    margin: 0 auto;
+    max-width: 12em;
+    font-size: 1.375em;
+    line-height: 1.7em;
+    color: var(--bodyText);
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #about-glimpse {
+    padding: 5.375em 0 6.5625em;
+  }
+  #about-glimpse:before {
+    width: 15em;
+    height: 18.75em;
+    left: -3em;
+    bottom: 0.625em;
+    opacity: .16;
+  }
+  #about-glimpse .glimpse-head {
+    margin-bottom: 3.25em;
+  }
+  #about-glimpse .glimpse-head h2 {
+    font-size: 3.25em;
+  }
+  #about-glimpse .glimpse-head .glimpse-script-row {
+    gap: 1.25em;
+  }
+  #about-glimpse .glimpse-head .glimpse-script-row .line {
+    width: 6.875em;
+  }
+  #about-glimpse .glimpse-head .glimpse-script-row p {
+    font-size: 2.375em;
+  }
+  #about-glimpse .glimpse-grid {
+    max-width: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875em;
+    align-items: start;
+  }
+  #about-glimpse .glimpse-photo {
+    margin-bottom: 1.5em;
+  }
+  #about-glimpse .glimpse-copy h3 {
+    font-size: 1.875em;
+  }
+  #about-glimpse .glimpse-copy h4 {
+    font-size: 1.875em;
+  }
+  #about-glimpse .glimpse-copy .mini-line {
+    width: 3.875em;
+    margin-bottom: 1.25em;
+  }
+  #about-glimpse .glimpse-copy p {
+    font-size: 1.25em;
+    max-width: 11em;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1300px) {
+  #about-glimpse {
+    padding: 6.25em 0 7.5em;
+  }
+  #about-glimpse:before {
+    width: 20em;
+    height: 23.75em;
+    left: -4.375em;
+    bottom: -0.625em;
+    opacity: .14;
+  }
+  #about-glimpse .container {
+    width: 96%;
+    max-width: 80em;
+  }
+  #about-glimpse .glimpse-head {
+    margin-bottom: 3.875em;
+  }
+  #about-glimpse .glimpse-head h2 {
+    font-size: 4.5em;
+    margin-bottom: 0.5em;
+  }
+  #about-glimpse .glimpse-head .glimpse-script-row {
+    gap: 1.5em;
+  }
+  #about-glimpse .glimpse-head .glimpse-script-row .line {
+    width: 9.375em;
+  }
+  #about-glimpse .glimpse-head .glimpse-script-row p {
+    font-size: 3.25em;
+    line-height: 1;
+  }
+  #about-glimpse .glimpse-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.875em;
+  }
+  #about-glimpse .glimpse-photo {
+    padding: 0.3125em;
+    margin-bottom: 1.75em;
+    box-shadow: 0 0.625em 1.75em rgba(0, 0, 0, 0.04);
+  }
+  #about-glimpse .glimpse-copy h3 {
+    font-size: 2.125em;
+    letter-spacing: .18em;
+  }
+  #about-glimpse .glimpse-copy h4 {
+    font-size: 2.125em;
+    margin-top: 0.25em;
+    margin-bottom: 0.875em;
+  }
+  #about-glimpse .glimpse-copy .mini-line {
+    width: 4.625em;
+    margin-bottom: 1.5em;
+  }
+  #about-glimpse .glimpse-copy p {
+    font-size: 1.375em;
+    max-width: 12em;
+  }
+}
+/* ============================================
+   CTA
+   ============================================ */
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #cta {
@@ -320,10 +643,6 @@
     display: block;
     height: 69.25em;
     width: 125em;
-    background: url("../images/cta-squares.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
     opacity: 1;
     bottom: 0;
     left: 50%;

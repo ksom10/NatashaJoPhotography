@@ -1,0 +1,1285 @@
+/* ============================================
+   PORTRAITS BOARD
+   ============================================ */
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #services-board {
+    position: relative;
+    overflow: hidden;
+    background: #fdfaf7;
+    padding: 6.875em 0 5em;
+  }
+  #services-board .inner {
+    position: relative;
+    width: 92%;
+    max-width: 75em;
+    margin: 0 auto;
+    z-index: 2;
+    margin-top: 6em;
+  }
+  #services-board .corner-floral {
+    position: absolute;
+    pointer-events: none;
+    opacity: .28;
+    z-index: 1;
+  }
+  #services-board .floral-top {
+    width: 11.25em;
+    height: auto;
+    top: 1.125em;
+    left: -2.625em;
+  }
+  #services-board .floral-bottom {
+    width: 13.125em;
+    height: auto;
+    right: -3.625em;
+    bottom: 0.875em;
+  }
+  #services-board .section-head {
+    text-align: center;
+    margin-bottom: 2.625em;
+    position: relative;
+    z-index: 2;
+  }
+  #services-board .title {
+    font-size: 3.375em;
+    line-height: 1.05em;
+    margin: 0 0 0.875em;
+    color: var(--primaryDark);
+    font-weight: 500;
+  }
+  #services-board .subtitle {
+    margin: 0 auto;
+    max-width: 38.75em;
+    font-size: 1.5em;
+    line-height: 1.45em;
+    font-style: italic;
+    color: var(--primary);
+  }
+  #services-board .board {
+    display: flex;
+    flex-direction: column;
+    gap: 2.625em;
+    position: relative;
+    z-index: 2;
+  }
+  #services-board .copy-block {
+    text-align: left;
+  }
+  #services-board .board-title {
+    font-size: 2.5em;
+    line-height: 1.1em;
+    margin: 0 0 1.5em;
+    color: var(--primaryDark);
+    font-weight: 500;
+  }
+  #services-board .lead {
+    margin: 0 0 1.125em;
+    color: var(--bodyText);
+    font-size: 1.375em;
+    line-height: 1.8em;
+    max-width: 38.75em;
+  }
+  #services-board .lead:last-of-type {
+    margin-bottom: 1.875em;
+  }
+  #services-board .portrait-list {
+    list-style: none;
+    margin: 0 0 2.125em;
+    padding: 0;
+    display: grid;
+    gap: 1.75em;
+  }
+  #services-board .portrait-list li {
+    position: relative;
+    padding-left: 3.125em;
+  }
+  #services-board .portrait-list li:before {
+    content: '';
+    position: absolute;
+    width: 1.125em;
+    height: 1.125em;
+    left: 0;
+    top: 0.5em;
+    border: 0.1875em solid var(--primary);
+    transform: rotate(45deg);
+    opacity: .9;
+  }
+  #services-board .portrait-list li:after {
+    content: '';
+    position: absolute;
+    width: 0.5em;
+    height: 0.5em;
+    left: 0.3125em;
+    top: 0.8125em;
+    border: 0.125em solid var(--primary);
+    transform: rotate(45deg);
+    opacity: .8;
+  }
+  #services-board .portrait-list h3 {
+    margin: 0 0 0.625em;
+    font-size: 1.875em;
+    line-height: 1.2em;
+    color: var(--primaryDark);
+    font-weight: 500;
+  }
+  #services-board .portrait-list p {
+    margin: 0;
+    color: var(--primary);
+    font-size: 1.25em;
+    line-height: 1.65em;
+    font-style: italic;
+  }
+  #services-board .portrait-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 15.625em;
+    min-height: 4em;
+    padding: 0 1.875em;
+    border-radius: 62.4375em;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  #services-board .portrait-btn:hover {
+    background-color: var(--primaryShade);
+    transform: translateY(-0.125em);
+  }
+  #services-board .photo-stack {
+    position: relative;
+    width: 100%;
+    min-height: 35em;
+    max-width: 31.25em;
+    margin: 0 auto;
+  }
+  #services-board .stack-photo {
+    position: absolute;
+    display: block;
+    width: 72%;
+    border-radius: 2.125em;
+    overflow: hidden;
+    background: #fff;
+    padding: 0.5em;
+    box-shadow: 0 1.125em 3.125em rgba(0, 0, 0, 0.1);
+  }
+  #services-board .stack-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.75em;
+  }
+  #services-board .photo-one {
+    top: 0;
+    left: 0;
+    transform: rotate(-4deg);
+    z-index: 1;
+  }
+  #services-board .photo-two {
+    top: 1.75em;
+    right: 0;
+    transform: rotate(4deg);
+    z-index: 2;
+  }
+  #services-board .photo-three {
+    bottom: 0;
+    left: 20%;
+    transform: rotate(2deg);
+    z-index: 3;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #services-board {
+    padding: 9.375em 0 6.25em;
+  }
+  #services-board .floral-top {
+    width: 13.75em;
+    top: 0.625em;
+    left: -3.5em;
+  }
+  #services-board .floral-bottom {
+    width: 16.25em;
+    right: -4.375em;
+    bottom: 0.625em;
+  }
+  #services-board .section-head {
+    margin-bottom: 3.5em;
+  }
+  #services-board .title {
+    font-size: 4em;
+  }
+  #services-board .subtitle {
+    font-size: 1.625em;
+  }
+  #services-board .board {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 3.125em;
+  }
+  #services-board .board-title {
+    font-size: 2.875em;
+  }
+  #services-board .lead {
+    font-size: 1.5em;
+  }
+  #services-board .portrait-list {
+    gap: 2em;
+  }
+  #services-board .portrait-list h3 {
+    font-size: 2em;
+  }
+  #services-board .portrait-list p {
+    font-size: 1.375em;
+  }
+  #services-board .portrait-btn {
+    min-width: 16.875em;
+    min-height: 4.25em;
+    font-size: 1.375em;
+  }
+  #services-board .photo-stack {
+    max-width: none;
+    min-height: 43.75em;
+  }
+  #services-board .stack-photo {
+    width: 62%;
+    border-radius: 2.25em;
+    padding: 0.5625em;
+  }
+  #services-board .stack-photo img {
+    border-radius: 1.875em;
+  }
+  #services-board .photo-one {
+    top: 0;
+    left: 4%;
+  }
+  #services-board .photo-two {
+    top: 3.125em;
+    right: 0;
+  }
+  #services-board .photo-three {
+    bottom: 0.625em;
+    left: 26%;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1300px) {
+  #services-board {
+    padding: 11.875em 0 7.5em;
+  }
+  #services-board .inner {
+    width: 96%;
+    max-width: 81.25em;
+    margin-top: 10em;
+  }
+  #services-board .floral-top {
+    width: 38.75em;
+    top: -0.625em;
+    left: -5.125em;
+    opacity: .32;
+  }
+  #services-board .floral-bottom {
+    width: 38.75em;
+    right: -5.875em;
+    bottom: -1.875em;
+    opacity: .32;
+  }
+  #services-board .section-head {
+    margin-bottom: 4.375em;
+  }
+  #services-board .title {
+    font-size: 6em;
+    margin-bottom: 0.75em;
+  }
+  #services-board .subtitle {
+    font-size: 1.875em;
+    max-width: 45em;
+  }
+  #services-board .board {
+    grid-template-columns: .92fr 1.08fr;
+    gap: 5em;
+    align-items: start;
+  }
+  #services-board .copy-block {
+    padding-top: 1.875em;
+  }
+  #services-board .board-title {
+    font-size: 3.625em;
+    margin-bottom: 1.75em;
+  }
+  #services-board .lead {
+    font-size: 1.75em;
+    max-width: 38.75em;
+  }
+  #services-board .lead:last-of-type {
+    margin-bottom: 2.375em;
+  }
+  #services-board .portrait-list {
+    gap: 2.375em;
+    margin-bottom: 2.75em;
+  }
+  #services-board .portrait-list li {
+    padding-left: 3.625em;
+  }
+  #services-board .portrait-list li:before {
+    width: 1.25em;
+    height: 1.25em;
+    top: 0.625em;
+  }
+  #services-board .portrait-list li:after {
+    width: 0.5625em;
+    height: 0.5625em;
+    left: 0.34375em;
+    top: 0.96875em;
+  }
+  #services-board .portrait-list h3 {
+    font-size: 2.375em;
+    margin-bottom: 0.625em;
+  }
+  #services-board .portrait-list p {
+    font-size: 1.5em;
+  }
+  #services-board .portrait-btn {
+    min-width: 18.125em;
+    min-height: 4.625em;
+    padding: 0 2.125em;
+    font-size: 1.5em;
+  }
+  #services-board .photo-stack {
+    min-height: 47.5em;
+  }
+  #services-board .stack-photo {
+    width: 54%;
+    border-radius: 2.375em;
+    padding: 0.625em;
+    box-shadow: 0 1.375em 3.75em rgba(0, 0, 0, 0.11);
+  }
+  #services-board .stack-photo img {
+    border-radius: 1.875em;
+  }
+  #services-board .photo-one {
+    top: 0;
+    left: 2%;
+    transform: rotate(-5deg);
+  }
+  #services-board .photo-two {
+    top: 2.125em;
+    right: 0;
+    transform: rotate(5deg);
+  }
+  #services-board .photo-three {
+    bottom: 0;
+    left: 22%;
+    transform: rotate(2deg);
+  }
+}
+/* ============================================
+   PORTRAIT STORY SECTION
+   ============================================ */
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #portrait-story {
+    position: relative;
+    overflow: hidden;
+    background: #fdfaf7;
+    padding: 5em 0 5.625em;
+  }
+  #portrait-story .inner {
+    position: relative;
+    width: 92%;
+    max-width: 75em;
+    margin: 0 auto;
+    z-index: 2;
+  }
+  #portrait-story .story-floral {
+    position: absolute;
+    pointer-events: none;
+    opacity: .24;
+    z-index: 1;
+  }
+  #portrait-story .floral-left {
+    width: 8.125em;
+    height: auto;
+    left: -3em;
+    top: 13.125em;
+  }
+  #portrait-story .floral-right {
+    width: 11.25em;
+    height: auto;
+    right: -3.375em;
+    bottom: 3.75em;
+  }
+  #portrait-story .story-stack {
+    position: relative;
+    width: 100%;
+    max-width: 33.75em;
+    min-height: 16.25em;
+    margin: 0 auto 2.75em;
+    z-index: 2;
+    margin-top: -5.25em;
+  }
+  #portrait-story .story-photo {
+    position: absolute;
+    display: block;
+    width: 42%;
+    aspect-ratio: 0.8;
+    background: #fff;
+    border-radius: 1.75em;
+    padding: 0.4375em;
+    box-shadow: 0 0.875em 2.625em rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  #portrait-story .story-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.375em;
+  }
+  #portrait-story .photo-large {
+    top: 3.5em;
+    left: 1%;
+    transform: rotate(-24deg);
+    z-index: 1;
+  }
+  #portrait-story .photo-top-right {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  #portrait-story .photo-bottom-right {
+    top: 3.5em;
+    right: 1%;
+    transform: rotate(24deg);
+    z-index: 1;
+  }
+  #portrait-story .story-copy {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 47.5em;
+    margin: 0 auto 2.75em;
+  }
+  #portrait-story .story-copy h2 {
+    margin: 0 0 1.25em;
+    font-size: 2.125em;
+    line-height: 1.35em;
+    font-weight: 500;
+    color: var(--primaryDark);
+  }
+  #portrait-story .story-copy p {
+    margin: 0 0 1.25em;
+    color: var(--bodyText);
+    font-size: 1.25em;
+    line-height: 1.8em;
+  }
+  #portrait-story .story-copy p:last-of-type {
+    margin-bottom: 0;
+  }
+  #portrait-story .story-values {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.125em;
+    max-width: 47.5em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #portrait-story .value {
+    position: relative;
+  }
+  #portrait-story .value .icon-wrap {
+    width: 5.25em;
+    height: 5.25em;
+    border-radius: 50%;
+    border: 0.0625em solid rgba(185, 169, 143, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1em;
+    background: rgba(255, 255, 255, 0.55);
+  }
+  #portrait-story .value .icon-wrap img {
+    width: 2.625em;
+    height: 2.625em;
+    object-fit: contain;
+  }
+  #portrait-story .value h3 {
+    margin: 0 0 0.625em;
+    font-size: 1.625em;
+    line-height: 1.3em;
+    font-weight: 500;
+    color: var(--primaryDark);
+  }
+  #portrait-story .value p {
+    margin: 0;
+    font-size: 1.125em;
+    line-height: 1.7em;
+    color: var(--bodyText);
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #portrait-story {
+    padding: 6.25em 0 6.875em;
+  }
+  #portrait-story .floral-left {
+    width: 9.375em;
+    left: -3.375em;
+    top: 13.125em;
+  }
+  #portrait-story .floral-right {
+    width: 13.75em;
+    right: -4em;
+    bottom: 2.8125em;
+  }
+  #portrait-story .story-stack {
+    max-width: 47.5em;
+    min-height: 26.875em;
+    margin-bottom: 3.5em;
+  }
+  #portrait-story .story-photo {
+    width: 30%;
+    aspect-ratio: 0.8;
+    border-radius: 2em;
+    padding: 0.5em;
+  }
+  #portrait-story .story-photo img {
+    border-radius: 1.625em;
+  }
+  #portrait-story .photo-large {
+    top: 3em;
+    left: 11%;
+    transform: rotate(-24deg);
+  }
+  #portrait-story .photo-top-right {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  #portrait-story .photo-bottom-right {
+    top: 3em;
+    right: 11%;
+    transform: rotate(24deg);
+  }
+  #portrait-story .story-copy {
+    margin-bottom: 3.375em;
+  }
+  #portrait-story .story-copy h2 {
+    font-size: 2.625em;
+  }
+  #portrait-story .story-copy p {
+    font-size: 1.375em;
+  }
+  #portrait-story .story-values {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75em;
+    max-width: none;
+  }
+  #portrait-story .value .icon-wrap {
+    width: 5.75em;
+    height: 5.75em;
+    margin-bottom: 1.125em;
+  }
+  #portrait-story .value .icon-wrap img {
+    width: 2.875em;
+    height: 2.875em;
+  }
+  #portrait-story .value h3 {
+    font-size: 1.75em;
+  }
+  #portrait-story .value p {
+    font-size: 1.1875em;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1300px) {
+  #portrait-story {
+    padding: 7.5em 0 8.125em;
+  }
+  #portrait-story .inner {
+    width: 96%;
+    max-width: 80em;
+  }
+  #portrait-story .floral-left {
+    width: 11.25em;
+    left: -4.125em;
+    top: 15em;
+    opacity: .26;
+  }
+  #portrait-story .floral-right {
+    width: 15.625em;
+    right: -4.625em;
+    bottom: 2.375em;
+    opacity: .28;
+  }
+  #portrait-story .story-stack {
+    max-width: 68.75em;
+    min-height: 38.75em;
+    margin-bottom: 4.125em;
+  }
+  #portrait-story .story-photo {
+    width: 36%;
+    aspect-ratio: 0.8;
+    border-radius: 2.25em;
+    padding: 0.5625em;
+    box-shadow: 0 1.125em 3.125em rgba(0, 0, 0, 0.08);
+  }
+  #portrait-story .story-photo img {
+    border-radius: 1.75em;
+  }
+  #portrait-story .photo-large {
+    top: 5.625em;
+    left: 8%;
+    transform: rotate(-24deg);
+    z-index: 1;
+  }
+  #portrait-story .photo-top-right {
+    top: 0;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  #portrait-story .photo-bottom-right {
+    top: 5.625em;
+    right: -2%;
+    transform: rotate(24deg);
+    z-index: 1;
+  }
+  #portrait-story .story-copy {
+    max-width: 56.25em;
+    margin-bottom: 4em;
+  }
+  #portrait-story .story-copy h2 {
+    font-size: 3.25em;
+    max-width: 47.5em;
+    margin: 0 auto 1.5em;
+  }
+  #portrait-story .story-copy p {
+    font-size: 1.5em;
+    max-width: 40.83333333em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #portrait-story .story-values {
+    gap: 2.5em;
+    max-width: 70em;
+  }
+  #portrait-story .value .icon-wrap {
+    width: 6.5em;
+    height: 6.5em;
+    margin-bottom: 1.25em;
+  }
+  #portrait-story .value .icon-wrap img {
+    width: 3.125em;
+    height: 3.125em;
+  }
+  #portrait-story .value h3 {
+    font-size: 2em;
+    margin-bottom: 0.75em;
+  }
+  #portrait-story .value p {
+    font-size: 1.25em;
+    max-width: 15em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* ============================================
+   PORTRAIT PROCESS
+   ============================================ */
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #portrait-process {
+    padding: 5em 0 5.625em;
+    background: #fdfaf7;
+    position: relative;
+    overflow: hidden;
+  }
+  #portrait-process .container {
+    width: 92%;
+    max-width: 75em;
+    margin: 0 auto;
+  }
+  #portrait-process .pp-header {
+    text-align: center;
+    max-width: 47.5em;
+    margin: 0 auto 3.25em;
+  }
+  #portrait-process .pp-header h2 {
+    margin: 0 0 0.875em;
+    font-size: 2.625em;
+    line-height: 1.15em;
+    font-weight: 500;
+    color: var(--primaryDark);
+  }
+  #portrait-process .pp-header p {
+    margin: 0 auto;
+    max-width: 38.75em;
+    font-size: 1.375em;
+    line-height: 1.65em;
+    color: var(--bodyText);
+  }
+  #portrait-process .pp-header p em {
+    color: var(--primary);
+    font-style: italic;
+  }
+  #portrait-process .pp-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.25em;
+    margin-bottom: 4.375em;
+  }
+  #portrait-process .pp-step {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75em;
+    align-items: center;
+  }
+  #portrait-process .pp-copy {
+    position: relative;
+    text-align: center;
+    max-width: 33.75em;
+    margin: 0 auto;
+  }
+  #portrait-process .pp-step-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.875em;
+    margin-bottom: 1.125em;
+  }
+  #portrait-process .pp-step-title h3 {
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.2em;
+    font-weight: 500;
+    color: var(--primaryDark);
+  }
+  #portrait-process .step-number {
+    width: 3em;
+    height: 3em;
+    border: 0.0625em solid rgba(185, 169, 143, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    line-height: 1;
+    color: var(--primaryDark);
+    flex: none;
+  }
+  #portrait-process .pp-copy p {
+    margin: 0;
+    font-size: 1.375em;
+    line-height: 1.75em;
+    color: var(--bodyText);
+  }
+  #portrait-process .pp-arrow {
+    display: none;
+  }
+  #portrait-process .pp-floral {
+    display: none;
+  }
+  #portrait-process .pp-images {
+    position: relative;
+    width: 100%;
+    max-width: 32.5em;
+    min-height: 19.375em;
+    margin: 0 auto;
+  }
+  #portrait-process .pp-photo {
+    position: absolute;
+    width: 46%;
+    aspect-ratio: 0.8;
+    display: block;
+    background: #fff;
+    border-radius: 1.875em;
+    padding: 0.5em;
+    overflow: hidden;
+    box-shadow: 0 1em 2.5em rgba(0, 0, 0, 0.08);
+  }
+  #portrait-process .pp-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5em;
+  }
+  #portrait-process .top-stack .photo-left {
+    top: 1.5em;
+    left: 4%;
+    transform: rotate(-5deg);
+    z-index: 1;
+  }
+  #portrait-process .top-stack .photo-right {
+    top: 0;
+    right: 4%;
+    transform: rotate(5deg);
+    z-index: 2;
+  }
+  #portrait-process .bottom-stack .photo-left {
+    top: 0;
+    left: 4%;
+    transform: rotate(-2deg);
+    z-index: 2;
+  }
+  #portrait-process .bottom-stack .photo-right {
+    top: 1.125em;
+    right: 6%;
+    transform: rotate(5deg);
+    z-index: 1;
+  }
+  #portrait-process .pp-includes {
+    max-width: 61.25em;
+    margin: 0 auto;
+  }
+  #portrait-process .pp-includes-head {
+    text-align: center;
+    margin-bottom: 2.625em;
+  }
+  #portrait-process .pp-includes-head h2 {
+    margin: 0 0 0.75em;
+    font-size: 2.625em;
+    line-height: 1.15em;
+    font-weight: 500;
+    color: var(--primaryDark);
+  }
+  #portrait-process .pp-includes-head p {
+    margin: 0;
+    font-size: 1.375em;
+    line-height: 1.6em;
+    color: var(--bodyText);
+  }
+  #portrait-process .pp-includes-head p em {
+    color: var(--primary);
+    font-style: italic;
+  }
+  #portrait-process .pp-include-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.875em;
+  }
+  #portrait-process .include-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+  }
+  #portrait-process .include-icon {
+    width: 1.375em;
+    height: 1.375em;
+    flex: none;
+    margin-top: 0.4375em;
+    position: relative;
+    transform: rotate(45deg);
+    border: 0.125em solid var(--primary);
+    opacity: .85;
+  }
+  #portrait-process .include-icon:before {
+    content: '';
+    position: absolute;
+    inset: 0.25em;
+    border: 0.09375em solid var(--primary);
+  }
+  #portrait-process .include-icon.flower-icon {
+    border-radius: 50%;
+    transform: none;
+  }
+  #portrait-process .include-icon.flower-icon:before {
+    inset: 0.3125em;
+    border-radius: 50%;
+  }
+  #portrait-process .include-copy h3 {
+    margin: 0 0 0.5em;
+    font-size: 1.875em;
+    line-height: 1.25em;
+    font-weight: 500;
+    color: var(--primaryDark);
+  }
+  #portrait-process .include-copy p {
+    margin: 0;
+    font-size: 1.25em;
+    line-height: 1.7em;
+    color: var(--bodyText);
+  }
+  #portrait-process .include-copy p em {
+    color: var(--primaryDark);
+    font-style: italic;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #portrait-process {
+    padding: 6.25em 0 6.875em;
+  }
+  #portrait-process .pp-header {
+    margin-bottom: 4em;
+  }
+  #portrait-process .pp-header h2 {
+    font-size: 3.375em;
+  }
+  #portrait-process .pp-header p {
+    font-size: 1.5em;
+  }
+  #portrait-process .pp-steps {
+    gap: 4.375em;
+    margin-bottom: 5.25em;
+  }
+  #portrait-process .pp-step {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.125em;
+  }
+  #portrait-process .step-one .pp-copy {
+    order: 1;
+    text-align: left;
+    max-width: 26.25em;
+    margin: 0;
+  }
+  #portrait-process .step-one .pp-images {
+    order: 2;
+  }
+  #portrait-process .step-one .pp-step-title {
+    justify-content: flex-start;
+  }
+  #portrait-process .step-two .pp-images {
+    order: 1;
+  }
+  #portrait-process .step-two .pp-copy {
+    order: 2;
+    text-align: left;
+    max-width: 26.25em;
+    margin: 0;
+  }
+  #portrait-process .step-two .pp-step-title {
+    justify-content: flex-start;
+  }
+  #portrait-process .pp-copy p {
+    font-size: 1.5em;
+  }
+  #portrait-process .pp-arrow {
+    display: block;
+    position: relative;
+    width: 13.75em;
+    height: 0.0625em;
+    background: rgba(185, 169, 143, 0.35);
+    margin-top: 1.625em;
+  }
+  #portrait-process .pp-arrow:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 1em;
+    height: 1em;
+    border-top: 0.09375em solid rgba(185, 169, 143, 0.55);
+    border-right: 0.09375em solid rgba(185, 169, 143, 0.55);
+  }
+  #portrait-process .arrow-right:after {
+    right: 0;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  #portrait-process .arrow-left:after {
+    left: 0;
+    transform: translateY(-50%) rotate(-135deg);
+  }
+  #portrait-process .pp-floral {
+    display: block;
+    position: absolute;
+    left: -5.625em;
+    bottom: -1.25em;
+    width: 11.25em;
+    height: auto;
+    opacity: .3;
+    pointer-events: none;
+  }
+  #portrait-process .pp-images {
+    max-width: 32.5em;
+    min-height: 22.5em;
+  }
+  #portrait-process .pp-photo {
+    width: 46%;
+    border-radius: 2em;
+    padding: 0.5em;
+  }
+  #portrait-process .pp-photo img {
+    border-radius: 1.625em;
+  }
+  #portrait-process .pp-includes-head {
+    margin-bottom: 3.125em;
+  }
+  #portrait-process .pp-includes-head h2 {
+    font-size: 3.25em;
+  }
+  #portrait-process .pp-includes-head p {
+    font-size: 1.5em;
+  }
+  #portrait-process .pp-include-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.25em;
+    row-gap: 2.625em;
+  }
+  #portrait-process .include-copy h3 {
+    font-size: 2em;
+  }
+  #portrait-process .include-copy p {
+    font-size: 1.3125em;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1300px) {
+  #portrait-process {
+    padding: 7.5em 0 8.125em;
+  }
+  #portrait-process .container {
+    width: 96%;
+    max-width: 80em;
+  }
+  #portrait-process .pp-header {
+    max-width: 53.75em;
+    margin-bottom: 4.625em;
+  }
+  #portrait-process .pp-header h2 {
+    font-size: 4.125em;
+    margin-bottom: 0.75em;
+  }
+  #portrait-process .pp-header p {
+    font-size: 1.75em;
+    max-width: 26.42857143em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #portrait-process .pp-steps {
+    gap: 5.25em;
+    margin-bottom: 6em;
+  }
+  #portrait-process .pp-step {
+    grid-template-columns: .92fr 1.08fr;
+    gap: 3.125em;
+    align-items: center;
+  }
+  #portrait-process .step-two {
+    grid-template-columns: 1.08fr .92fr;
+  }
+  #portrait-process .pp-copy {
+    max-width: 28.75em;
+  }
+  #portrait-process .pp-step-title {
+    gap: 1.125em;
+    margin-bottom: 1.375em;
+  }
+  #portrait-process .pp-step-title h3 {
+    font-size: 2.625em;
+  }
+  #portrait-process .step-number {
+    width: 3.625em;
+    height: 3.625em;
+    font-size: 1.875em;
+  }
+  #portrait-process .pp-copy p {
+    font-size: 1.75em;
+    line-height: 1.75em;
+  }
+  #portrait-process .pp-arrow {
+    width: 16.25em;
+    margin-top: 1.875em;
+  }
+  #portrait-process .pp-floral {
+    left: -7.5em;
+    bottom: -1.25em;
+    width: 13.75em;
+    opacity: .28;
+  }
+  #portrait-process .pp-images {
+    max-width: 38.75em;
+    min-height: 26.875em;
+  }
+  #portrait-process .pp-photo {
+    width: 46%;
+    border-radius: 2.25em;
+    padding: 0.5625em;
+    box-shadow: 0 1.125em 3.125em rgba(0, 0, 0, 0.08);
+  }
+  #portrait-process .pp-photo img {
+    border-radius: 1.75em;
+  }
+  #portrait-process .top-stack .photo-left {
+    top: 1.625em;
+    left: 4%;
+    transform: rotate(-5deg);
+  }
+  #portrait-process .top-stack .photo-right {
+    top: 0;
+    right: 4%;
+    transform: rotate(5deg);
+  }
+  #portrait-process .bottom-stack .photo-left {
+    top: 0;
+    left: 3%;
+    transform: rotate(-3deg);
+  }
+  #portrait-process .bottom-stack .photo-right {
+    top: 1.5em;
+    right: 6%;
+    transform: rotate(5deg);
+  }
+  #portrait-process .pp-includes {
+    max-width: 73.75em;
+  }
+  #portrait-process .pp-includes-head {
+    margin-bottom: 3.625em;
+  }
+  #portrait-process .pp-includes-head h2 {
+    font-size: 4em;
+    margin-bottom: 0.625em;
+  }
+  #portrait-process .pp-includes-head p {
+    font-size: 1.75em;
+  }
+  #portrait-process .pp-include-grid {
+    column-gap: 4em;
+    row-gap: 3em;
+  }
+  #portrait-process .include-item {
+    gap: 1.25em;
+  }
+  #portrait-process .include-icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 0.5625em;
+  }
+  #portrait-process .include-copy h3 {
+    font-size: 2.375em;
+    margin-bottom: 0.5em;
+  }
+  #portrait-process .include-copy p {
+    font-size: 1.5em;
+    max-width: 20em;
+  }
+}
+/*-- -------------------------- -->
+<---    Final Call To Action    -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #cta {
+    position: relative;
+    padding: 3.125em 0;
+  }
+  #cta:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .6;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #cta .container {
+    text-align: center;
+  }
+  #cta picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+  }
+  #cta picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #cta .title {
+    font-weight: 900;
+    font-size: min(9vw, 3em);
+    line-height: 1.20833333;
+    color: #fff;
+    position: relative;
+    margin-bottom: 0.75em;
+    text-align: center;
+  }
+  #cta p {
+    color: #fff;
+    text-align: center;
+    opacity: 1;
+    margin: auto;
+    margin-bottom: 2em;
+    width: 96%;
+    max-width: 33.22222222em;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #cta {
+    padding: 10.5em 0;
+  }
+}
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+  #cta {
+    position: relative;
+    margin-top: 6.25em;
+  }
+  #cta:before {
+    display: none;
+  }
+  #cta:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 69.25em;
+    width: 125em;
+    background: url("../images/cta-squares.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -3;
+  }
+  #cta .container {
+    width: 90.0625%;
+    margin: auto;
+  }
+  #cta picture {
+    width: 90.0625%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #cta picture:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .6;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #cta:after {
+    display: none;
+  }
+}

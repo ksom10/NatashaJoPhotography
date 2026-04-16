@@ -2,425 +2,481 @@
 <---       Side By Side         -->
 <--- -------------------------- -*/
 
-/* ------------------------------------ */
-/*     Mobile (min-width: 0em) View     */
-/* ------------------------------------ */
+/* Mobile */
 @media only screen and (min-width: 0em) {
-    #triplet {
-      padding: 50px 0;
-      background-color: var(--primaryShade);
-  
-      .container {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
+  #services-overview {
+    padding: 64/16em 0;
+    background: #fff;
+    margin-top: -32/16em;
+
+    .container {
+      width: 92%;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .svc-head {
+      text-align: center;
+      margin: 0 auto 32/16em auto;
+      max-width: 820/16em;
+
+      h2 {
+        font-size: 38/16em;
+        line-height: 1.1em;
+        color: var(--primaryDark);
+        font-weight: 800;
+        margin-bottom: 14/16em;
       }
-  
-      .content {
-        margin: auto;
-        margin-top: 25/16em;
-        max-width: 611/16em;
-  
-        h2 {
-          font-size: 32/16em;
-          margin-bottom: 42/48em;
-          color: var(--primary);
-        }
-  
-        p {
-          margin-bottom: 20/18em;
-          color: var(--primary);
-        }
-  
-        ul {
-          padding-left: 12/16em;
-          margin-bottom: 12/16em;
-          color: var(--primary);
-  
-          li {
-            list-style: none;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            color: var(--primary);
-  
-            img {
-              margin-right: 10/16em;
-              margin-top: 4/18em;
-            }
+
+      p {
+        color: var(--bodyText);
+        font-size: 18/16em;
+        line-height: 1.6em;
+        margin: 0 auto;
+        max-width: 680/16em;
+      }
+    }
+
+    /* Grid wrapper */
+    .svc-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24/16em;
+      align-items: start;
+    }
+
+    /* Left media */
+    .svc-media {
+      display: block;
+      width: 100%;
+      border-radius: 24/16em;
+      overflow: hidden;
+      box-shadow: 0 14/16em 40/16em rgba(0,0,0,.10);
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    /* Right list */
+    .svc-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18/16em;
+    }
+
+    .svc-item {
+      display: grid;
+      grid-template-columns: 72/16em 1fr;
+      gap: 14/16em;
+      align-items: center;
+      padding: 14/16em 16/16em;
+      border-radius: 16/16em;
+
+      /* soft divider vibe without a full box */
+      background: transparent;
+    }
+
+    .svc-icon {
+      width: 72/16em;
+      height: 72/16em;
+      border-radius: 9999px;
+      display: grid;
+      place-items: center;
+      /* circular brand chip behind the icon */
+      background: rgba(0,0,0,.0);
+
+      img {
+        width: 72/16em;
+        height: 72/16em;
+        display: block;
+      }
+    }
+
+    .svc-copy {
+      h3 {
+        font-size: 24/16em;
+        line-height: 1.2em;
+        margin: 0 0 6/16em 0;
+        color: var(--primaryDark);
+        font-weight: 800;
+      }
+      p {
+        margin: 0;
+        color: var(--bodyText);
+        line-height: 1.55em;
+      }
+    }
+  }
+}
+
+/* Tablet (>= 48em) */
+@media only screen and (min-width: 48em) {
+  #services-overview {
+    padding: 84/16em 0;
+
+    .svc-head {
+      h2 { font-size: 46/16em; }
+      p  { font-size: 19/16em; }
+    }
+
+    .svc-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 36/16em;
+      align-items: center;
+    }
+
+    .svc-media {
+      border-radius: 26/16em;
+    }
+
+    .svc-list {
+      gap: 22/16em;
+    }
+
+    .svc-item {
+      grid-template-columns: 84/16em 1fr;
+      padding: 16/16em 18/16em;
+    }
+
+    .svc-icon {
+      width: 84/16em;
+      height: 84/16em;
+
+      img {
+        width: 84/16em;
+        height: 84/16em;
+      }
+    }
+
+    .svc-copy {
+      h3 { font-size: 26/16em; }
+    }
+  }
+}
+
+/* Desktop (>= 1300px) */
+@media only screen and (min-width: 1300px) {
+  #services-overview {
+    padding: 96/16em 0;
+
+    .container {
+      width: 96%;
+      max-width: 1144/16em;
+    }
+
+    .svc-head {
+      margin-bottom: 40/16em;
+
+      h2 { font-size: 64/16em; }
+      p  { font-size: 32/16em; }
+    }
+
+    .svc-grid {
+      gap: 48/16em;
+    }
+
+    .svc-media {
+      border-radius: 28/16em;
+      box-shadow: 0 18/16em 50/16em rgba(0,0,0,.12);
+    }
+
+    .svc-list {
+      gap: 24/16em;
+    }
+
+    .svc-item {
+      grid-template-columns: 92/16em 1fr;
+      padding: 18/16em 20/16em;
+      border-radius: 18/16em;
+    }
+
+    .svc-icon {
+      width: 108/16em;
+      height: 108/16em;
+
+      img {
+        width: 108/16em;
+        height: 108/16em;
+      }
+    }
+
+    .svc-copy {
+      h3 { font-size: 32/16em; }
+      p  { font-size: 24/16em; }
+    }
+  }
+}
+
+
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #how-we-help {
+    position: relative;
+    padding: 72/16em 0;
+    background: #fff;
+
+    .container {
+      width: 92%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28/16em;
+      align-items: start;
+    }
+
+    /* LEFT COLUMN */
+    .hwh-copy {
+      h2 {
+        font-size: 40/16em;
+        line-height: 1.1em;
+        font-weight: 800;
+        color: var(--primaryDark);
+        margin-bottom: 20/16em;
+      }
+
+      .hwh-bullets {
+        margin: 0 0 22/16em 0;
+        padding: 0;
+        display: grid;
+        gap: 14/16em;
+
+        li {
+          list-style: none;
+          position: relative;
+          padding-left: 20/16em;
+          color: var(--primaryDark);
+          line-height: 1.55em;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 6/16em;
+            height: 6/16em;
+            border-radius: 50%;
+            background: var(--primary);
           }
         }
-  
-        .button-solid {
-          margin-top: 25/14em;
+      }
+
+      .hwh-btn {
+        display: inline-block;
+        font-weight: 600;
+        padding: 12/16em 24/16em;
+        border-radius: 12/16em;
+        background: var(--primaryDark);
+        color: #fff;
+        text-decoration: none;
+        transition: background-color .3s;
+        margin-top: 24/16em;
+
+        &:hover { background-color: var(--primaryShade); }
+      }
+
+      .hwh-icons {
+        margin-top: 26/16em;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18/16em;
+
+        .hwh-icon {
+          display: grid;
+          grid-template-columns: 64/16em 1fr;
+          gap: 12/16em;
+          align-items: center;
+
+          img { width: 64/16em; height: 64/16em; display: block; }
+
+          h3 {
+            margin: 0;
+            font-size: 18/16em;
+            line-height: 1.25em;
+            color: var(--primary);
+            font-weight: 800;
+          }
         }
       }
-  
-      /* Merge your snippet here */
-      .image-box {
-        display: block;
-        position: relative;
-        margin: auto;
-        /* Your existing sizing for mobile */
-        width: 711/16em;
-        height: 861/16em;
-  
-        /* Scales the .image-box down somewhat responsively */
-        font-size: ~"min(1.4vw, 1em)";
+    }
 
-  
-        /* Base IMG styling for mobile */
+    /* RIGHT COLUMN: PHOTO CLUSTER — MOBILE centered clover */
+    .hwh-photos {
+      position: relative;
+      display: block;
+      min-height: 360/16em;
+      margin: 0 auto;
+
+      .photo {
+        position: absolute;
+        border-radius: 9999px;
+        overflow: hidden;
+        box-shadow: 0 10/16em 28/16em rgba(0,0,0,.12);
+
         img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
+          display: block;
           width: 100%;
+          height: 100%;
           object-fit: cover;
         }
       }
-  
-      /* Style for the first .image-box in this section */
-      .image-box:nth-of-type(1) {
-        margin-left: 80/16em; /* from your snippet */
-        position: relative;
-  
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          margin-top: 640/16em;   /* from your snippet */
-          margin-left: 460/16em;  /* from your snippet */
-          width: 75px;
-          height: 75px;
-          background: url("../images/asset2.png") center center no-repeat;
-          background-size: contain;
-          z-index: 1;
-        }
-  
-        img {
-  
-          border-radius: 0% 0% 50% 0%;
-          height: 100%;
-        }
-      }
-  
-      /* Style for the second .image-box in this section */
-      .image-box:nth-of-type(2) {
-        margin-right: 80/16em;
-        position: relative;
-  
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          margin-top: 80/16em;
-          margin-left: 60/16em;
-          width: 75px;
-          height: 75px;
-          background: url("../images/asset1.png") center center no-repeat;
-          background-size: contain;
-          z-index: 1;
-        }
-  
-        img {
-          border-radius: 50% 0% 0% 0%;
-          height: 100%;
-          margin-top: 120/16em;
-        }
+
+      .p1 { width: 180/16em; height: 180/16em; top: 0; left: 50%; transform: translateX(-50%); z-index: 2; }
+      .p2 { width: 160/16em; height: 160/16em; top: 120/16em; left: 50%; transform: translateX(-180/16em); z-index: 2; }
+      .p3 { width: 180/16em; height: 180/16em; top: 140/16em; left: 50%; transform: translateX(-32/16em);  z-index: 3; }
+
+      &:after {
+        content: '';
+        position: absolute;
+
+        left: 50%;
+        bottom: -28/16em;
+        transform: translateX(-50%);
+
+        width: 160/16em;
+        height: 120/16em;
+        z-index: -1;
+        opacity: .85;
       }
     }
   }
-  
+}
 
-/* Inbetween */
-@media only screen and (min-width: 666px) {
-    #triplet {
-        padding: 100/16em 0;
+/* Tablet (>= 48em) — tight, clustered on the right */
+@media only screen and (min-width: 48em) {
+  #how-we-help {
+    .container {
+      grid-template-columns: 1fr 1fr;
+      gap: 44/16em;
+      align-items: center;
     }
-}   
 
-/* Small Desktop */
+    .hwh-photos {
+      position: relative;
+      min-height: 470/16em;
+    }
+
+    .hwh-photos .photo {
+      position: absolute;
+      border-radius: 9999px;
+      overflow: hidden;
+      box-shadow: 0 12/16em 40/16em rgba(0,0,0,.12);
+      left: auto;
+      transform: none;
+    }
+
+    .hwh-photos .p1 { width: 230/16em; height: 230/16em; top: 0;       right: 170/16em; z-index: 2; }
+    .hwh-photos .p2 { width: 200/16em; height: 200/16em; top: 90/16em;  right: 30/16em;  z-index: 3; }
+    .hwh-photos .p3 { width: 300/16em; height: 300/16em; top: 200/16em; right: 120/16em; z-index: 1; }
+
+    .hwh-photos:after {
+      content: '';
+      position: absolute;
+
+      left: auto;
+      right: 0;
+      bottom: -40/16em;
+
+      width: 240/16em;
+      height: 160/16em;
+      opacity: .85;
+      z-index: 0;
+    }
+  }
+}
+
+/* Desktop (>= 1300px) — icons left aligned */
 @media only screen and (min-width: 1300px) {
-    #triplet {
-        padding: 150/16em 0;
-        width: 100%;
-        max-height: 100%;
-
-        .container {
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: flex-start;
-        }
-
-        .content {
-            margin: 0;
-            width: 80%;
-            text-align: center;
-
-            h2 {
-                font-size: 42/16em;
-            }
-        }
-
-        .image-box {
-            margin: 0;
-            width: 20%;
-        }
-
-        .image-box:nth-of-type(1) {
-            margin-left: 80/16em;
-            position: relative;
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                margin-top: 320/16em;
-                margin-left: 100/16em; // ← shifted left
-                width: 130px;          // ← smaller size
-                height: 130px;
-                background: url("../images/asset2.png") center center no-repeat;
-                background-size: contain;
-                z-index: 1;
-            }
-
-            img {
-                border-radius: 0% 0% 50% 0%;
-                height: 50%;
-            }
-        }
-
-        .image-box:nth-of-type(2) {
-            margin-right: 80/16em;
-            position: relative;
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                margin-top: 320/16em;
-                margin-left: 20/16em;
-                width: 200px;
-                height: 200px;
-                background: url("../images/asset1.png") center center no-repeat;
-                background-size: contain;
-                z-index: 1;
-            }
-
-            img {
-                border-radius: 50% 0% 0% 0%;
-                height: 50%;
-                margin-top: 390/16em;
-            }
-        }
+  #how-we-help {
+    .container {
+      width: 96%;
+      max-width: 1144/16em;
+      gap: 56/16em;
     }
-}
 
-/* Large Desktop - restore original spacing/size */
-@media only screen and (min-width: 1600px) {
-    #triplet .image-box:nth-of-type(1)::before {
-        margin-left: 200/16em;
-        width: 130px;
-        height: 130px;
-    }
-}
+    /* ICONS */
+    .hwh-copy {
 
+      h2 {
+        font-size: 48/16em;
+      }
 
+      .hwh-bullets {
+        li {
+          font-size: 28/16em;
+        }
+      }
 
+      .hwh-btn {
+        padding: 14/16em 28/16em;
+        font-size: 24/16em;
+      }
 
-
-/* ------------------------------------------- */
-/*            Side By Side Reverse            */
-/* ------------------------------------------- */
-/* --------- Mobile --------- */
-@media only screen and (min-width: 0em) {
-    #sidebyside-reverse {
-      padding: 50px 0;
-  
-      .container {
+      .hwh-icons {
         display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-      }
-  
-      .content {
-        order: 1;
-        margin: auto;
-        margin-top: 75/16em;
-        max-width: 611/16em;
-  
-        h2 {
-          font-size: 32/16em;
-          margin-bottom: 42/48em;
-          color: var(--primary);
-        }
-  
-        p {
-          margin-bottom: 20/18em;
-          color: var(--primary);
-        }
-  
-        ul {
-          padding-left: 20/16em;
-          margin-bottom: 20/16em;
-          color: var(--primary);
-  
-          li {
-            list-style: none;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            color: var(--primary);
-            margin-bottom: 12/16em;
-
-            span {
-                padding-top: 4/16em;
-            }
-           
-  
-            img {
-              margin-right: 10/16em;
-              margin-top: 4/18em;
-            }
-          }
-        }
-  
-        .button-solid {
-          margin-top: 25/14em;
-        }
-      }
-  
-      /* Accordion Styling */
-      .accordion {
-        order: 2;
-        margin: auto;
-        margin-top: 24/16em;
-  
-        /* Each item margin-bottom for spacing */
-        .accordion-item {
-          margin-bottom: 24/16em;
-          border-bottom: 1px solid var(--primary);
-  
-          .accordion-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-  
-            h3 {
-              font-size: 16/16em;
-              margin: 0;
-              color: var(--primary);
-            }
-  
-            /* Puzzle SVG icon styling */
-            .accordion-icon {
-              width: 24/16em;  // Adjust size as needed
-              height: 24/16em;
-              transition: transform 0.3s ease;
-              transform: rotate(0deg);
-            }
-          }
-  
-          .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-  
-            p {
-              margin-top: 16/16em;
-              margin-bottom: 16/16em;
-              color: var(--primary);
-            }
-          }
-  
-          /* When open, expand the content and rotate the icon */
-          &.open {
-            .accordion-content {
-              max-height: 400px; // or large enough for content
-            }
-  
-            .accordion-icon {
-              transform: rotate(-90deg);
-            }
-          }
-        }
-      }
-    }
-  }
-  
-  /* --------- In-between (tablet, etc.) --------- */
-  @media only screen and (min-width: 666px) {
-    #sidebyside-reverse {
-      padding: 100/16em 0;
-  
-      .accordion {
-        width: 700/16em; // example width for tablets
-      }
-    }
-  }
-  
-  /* --------- Small Desktop --------- */
-  @media only screen and (min-width: 1300px) {
-    #sidebyside-reverse {
-      padding: 150/16em 0;
-  
-      .container {
-        max-width: 1391/16em;
-        flex-direction: row;
-        justify-content: space-between;
+        gap: 60/16em;
+        justify-content: flex-start;
         align-items: flex-start;
-      }
-  
-      .content {
-        margin: 0;
-        width: 60%;
-        order: 1;
 
-        h2 {
-            font-size: 42/16em;
-        }
-      }
-  
-      /* Move the accordion to the right side and adjust the spacing */
-      .accordion {
-        margin-left: 170/16em;
-        order: 2;
-        width: 550/16em; // adjust as you like
-  
-        .accordion-item {
-          margin-bottom: 24/16em;
-  
-          .accordion-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-  
-            h3 {
-              font-size: 32/16em;
-              margin: 0;
-            }
-  
-            .accordion-icon {
-              width: 32/16em;   // ensure proportionately bigger icon if you like
-              height: 32/16em;
-              transition: transform 0.3s ease;
-              margin-left: 16/16em;
-            }
+        .hwh-icon {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
+          img {
+            margin: 0 0 6/16em 0;
+            width: 96/16em;
+            height: 96/16em;
+          }
+
+          h3 {
+            font-size: 24/16em;
           }
         }
       }
     }
+
+    /* PHOTOS stay shifted right as before */
+    .hwh-photos {
+      position: relative;
+      min-height: 560/16em;
+      transform: translateX(280/16em);
+    }
+
+    .hwh-photos .photo {
+      position: absolute;
+      border-radius: 9999px;
+      overflow: hidden;
+      box-shadow: 0 12/16em 40/16em rgba(0,0,0,.12);
+    }
+
+    .hwh-photos .p1 { width: 300/16em; height: 300/16em; top: 0; right: 200/16em; z-index: 2; }
+    .hwh-photos .p2 { width: 260/16em; height: 260/16em; top: 110/16em; right: 40/16em;  z-index: 3; }
+    .hwh-photos .p3 { width: 340/16em; height: 340/16em; top: 230/16em; right: 150/16em; z-index: 1; }
+
+    .hwh-photos:after {
+      content: '';
+      position: absolute;
+
+      right: -350/16em;
+      bottom: -50/16em;
+
+      width: 400/16em;
+      height: 300/16em;
+
+    
+
+      opacity: .85;
+      z-index: 0;
+    }
   }
-  
+}
+
 
 
 /*-- -------------------------- -->
@@ -512,10 +568,6 @@
             display: block;
             height: 1108/16em;
             width: 2000/16em;
-            background: url("../images/cta-squares.svg");
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
             opacity: 1;
             bottom: 0;
             left: 50%;
@@ -539,7 +591,7 @@
                 height: 100%;
                 width: 100%;
                 background: #000;
-                opacity: .6;
+                opacity: .3;
                 top: 0;
                 left: 0;
                 z-index: 1;
